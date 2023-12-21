@@ -1,13 +1,15 @@
 import styled from 'styled-components/native';
 import { useTheme } from '../../context/ThemeContext';
+import { ThemeColors } from './ThemeColors';
 
+//Para el tema generico
 export const StyledContainer = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
   background-color: ${() => {
     const theme = useTheme(); 
-    return(theme.isDarkMode ? '#111315' : 'white')}};
+    return(theme.isDarkMode ? ThemeColors.gray : 'white')}};
 `;
 
 export const StyledText = styled.Text`
