@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "types": [
+      "styled-components"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "baseUrl": [
+        "./"
+      ],
+      "styled-components/native/dist/types": [
+        "./node_modules/styled-components/native"
+      ]
+    }
+  },
+  "extends": "expo/tsconfig.base"
+}
