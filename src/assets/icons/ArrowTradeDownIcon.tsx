@@ -3,8 +3,8 @@ import Svg, {Polygon} from 'react-native-svg';
 import {ISVGComponent} from './icons';
 
 const ArrowTradeDownIcon: React.FC<ISVGComponent> = ({
-  width = 22,
-  height = 22,
+  width = 17,
+  height = 17,
   color = 'red',
 }) => (
   <Svg width={width} height={height} viewBox="0 0 230.453 230.453" fill={color}>

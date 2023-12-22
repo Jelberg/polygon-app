@@ -26,31 +26,31 @@ export enum EnumVariantFont {
 
 export const STYLES_FONT: ISTYLES_FONT = {
     [EnumVariantFont.caption]: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 'medium',
         letterSpacing: '1px',
         color: ThemeColors.ligthGray
       },
       [EnumVariantFont.caption2]: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 'bold',
         letterSpacing: '1.2px',
         color: 'white'
       },
       [EnumVariantFont.numred]: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 'medium',
         letterSpacing: '1.2px',
         color: ThemeColors.red
       },
       [EnumVariantFont.numgreen]: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 'medium',
         letterSpacing: '1.2px',
         color: ThemeColors.green
       },
     [EnumVariantFont.title]: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 'bold',
         letterSpacing: '1.6px',
         color: ThemeColors.ligthGray

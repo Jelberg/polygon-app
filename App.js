@@ -5,6 +5,11 @@ import Avatar from './src/components/Avatar';
 import Button from './src/components/Button';
 import PlusIcon from './src/assets/icons/PlusIcon';
 import ArrowRigthIcon from './src/assets/icons/ArrowRigthIcon';
+import ItemList from './src/components/ItemList';
+import TextIcon from './src/components/TextIcon';
+import ArrowTradeUpIcon from './src/assets/icons/ArrowTradeUpIcon';
+import { ThemeColors } from './src/components/theme/ThemeColors';
+import QuestionIcon from './src/assets/icons/QuestionIcon';
 
 export default function App() {
   return (
@@ -23,6 +28,9 @@ export default function App() {
       <Avatar />
       <Button iconLeft={<PlusIcon />} title='Deposit' />
       <Button iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
+      <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text='+$0.42 (0.48%)' variant='numgreen' />
+      <ItemList />
+      <ItemList />
       
     </Providers>
   );
