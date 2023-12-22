@@ -9,7 +9,7 @@ export const StyledContainer = styled.View`
   justify-content: center;
   background-color: ${() => {
     const theme = useTheme(); 
-    return(theme.isDarkMode ? ThemeColors.gray : 'white')}};
+    return(theme.isDarkMode ? ThemeColors.darkGray : 'white')}};
 `;
 
 export const StyledText = styled.Text`

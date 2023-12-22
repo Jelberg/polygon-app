@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { useTheme } from '../../context/ThemeContext';
 import { ThemeColors } from './ThemeColors';
 
 export enum EnumVariantFont {
@@ -89,16 +88,8 @@ export const STYLES_FONT: ISTYLES_FONT = {
 }
 
 export const Text = styled.Text`
-  color: ${(props)=> {
-    return props.theme.variant ? STYLES_FONT[props.theme.variant].color : 'white'
-  }};
-  font-weight: ${(props)=> {
-    return props.theme.variant ? STYLES_FONT[props.theme.variant].fontWeight : 'regular'
-  }};
-  font-size: ${(props)=> {
-    return props.theme.variant ? STYLES_FONT[props.theme.variant].fontSize : '10px'
-  }};
-  letter-spacing: ${(props)=> {
-    return props.theme.variant ? STYLES_FONT[props.theme.variant].letterSpacing: '1px'
-  }};
+  color: ${(props) => STYLES_FONT[props.theme.variant ?? 'body'].color};
+  font-weight: ${(props) => STYLES_FONT[props.theme.variant ?? 'body'].fontWeight};
+  font-size: ${(props) => STYLES_FONT[props.theme.variant ?? 'body'].fontSize};
+  letter-spacing: ${(props) => STYLES_FONT[props.theme.variant ?? 'body'].letterSpacing};
 `;

@@ -1,9 +1,10 @@
-// App.js
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
 import Providers from './src/Providers';
-import ArrowTradeDownIcon from './src/assets/icons/ArrowTradeDownIcon';
 import { Text } from './src/components/theme/Text';
+import Avatar from './src/components/Avatar';
+import Button from './src/components/Button';
+import PlusIcon from './src/assets/icons/PlusIcon';
+import ArrowRigthIcon from './src/assets/icons/ArrowRigthIcon';
 
 export default function App() {
   return (
@@ -18,8 +19,11 @@ export default function App() {
       <Text theme={{variant:'h2'}}>H2</Text>
       <Text theme={{variant:'h1'}}>H1</Text>
       <Text theme={{variant:'largeTitle'}}>Large Title</Text>
-      <Text >Large Title</Text>
-      <StatusBar style="auto" />
+      <Text >Default Body</Text>
+      <Avatar />
+      <Button iconLeft={<PlusIcon />} title='Deposit' />
+      <Button iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
+      
     </Providers>
   );
 }
