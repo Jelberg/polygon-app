@@ -1,10 +1,8 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components/native";
 import { View } from "react-native";
-import { ThemeColors } from "./theme/ThemeColors";
 import { Text } from "./theme/Text";
-import { StyleProp, ViewStyle } from "react-native";
-import Avatar from "./Avatar";
+
 
 interface ITextIcon {
     iconRigth?: ReactElement;

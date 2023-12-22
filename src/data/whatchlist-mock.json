@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "stock": "SPFT",
+        "company": "Spotify",
+        "current_value": "$102.45",
+        "fluctuation":"+0.43$ (0.48%)"
+    },
+    {
+        "id":2,
+        "stock": "APP",
+        "company": "Apple Inc",
+        "current_value": "$155.31",
+        "fluctuation":"-1.48% (0.96%)"
+    },
+    {
+        "id":3,
+        "stock": "ADBE",
+        "company": "Adobe Inc",
+        "current_value": "$371.52",
+        "fluctuation":"+3.13$ (0.85%)"
+    },
+    {
+        "id":4,
+        "stock": "LFT",
+        "company": "Lyft Inc",
+        "current_value": "$155.31",
+        "fluctuation":"-1.48% (0.96%)"
+    }
+]

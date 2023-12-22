@@ -3,10 +3,8 @@ import { useTheme } from '../../context/ThemeContext';
 import { ThemeColors } from './ThemeColors';
 
 //Para el tema generico
-export const StyledContainer = styled.View`
+export const StyledContainer = styled.SafeAreaView`
   flex: 1;
-  align-items: center;
-  justify-content: center;
   background-color: ${() => {
     const theme = useTheme(); 
     return(theme.isDarkMode ? ThemeColors.darkGray : 'white')}};

@@ -12,7 +12,7 @@ interface IItemList {
 }
 
 export const StyledTouchableOpacity = styled.TouchableOpacity`
-padding-horizontal: 30px;
+padding-horizontal: 20px;
 padding-vertical: 18px;
 width: 100%;
 align-items: center;

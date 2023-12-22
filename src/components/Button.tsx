@@ -13,7 +13,7 @@ interface IButton {
 }
 
 export const StyledTouchableOpacity = styled.TouchableOpacity`
-padding-horizontal: 25px;
+padding-horizontal: 10px;
 padding-vertical: 10px;
 border-radius: 30px;
 flex-direction: row;
@@ -32,7 +32,7 @@ const Button: React.FC<IButton> = ({iconRigth, iconLeft, title='Button Example',
 
     return (<StyledTouchableOpacity onPress={ handleOnPress } style={style}>
         {iconLeft}
-            <Text theme={{variant:'body'}} style={{marginHorizontal:10, ...props}}>{title}</Text>
+            <Text theme={{variant:'caption2'}} style={{marginHorizontal:3, ...props}}>{title}</Text>
             {iconRigth}
          </StyledTouchableOpacity>)
 }

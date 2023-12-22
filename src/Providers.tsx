@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import {ThemeProvider} from './context/ThemeContext';
-import { StyledContainer} from './components/theme/StyledComponent';
+import { NavigationContainer } from "@react-navigation/native";
 
 interface IProviders {
   children: ReactNode;
@@ -9,11 +9,11 @@ interface IProviders {
 const Providers: React.FC<IProviders> = ({children}) => {
 
   return (
+    <NavigationContainer>
     <ThemeProvider>
-      <StyledContainer>
       {children}
-      </StyledContainer>
     </ThemeProvider>
+    </NavigationContainer>
   );
 };
 
