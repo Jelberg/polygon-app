@@ -13,6 +13,30 @@ import { ThemeColors } from '../components/theme/ThemeColors';
 import QuestionIcon from '../assets/icons/QuestionIcon';
 import SecretIcon from '../assets/icons/SecretIcon';
 
+const jsonData = {
+  "index": 3,
+  "item": {
+    "company": [
+      {
+        "company": "Microsoft Corporation Inc.",
+        "logo": "",
+        "ticket": "MSFT"
+      }
+    ],
+    "quote": {
+      // Properties...
+    },
+    "signal": "+",
+    "summary": "+0.05$ (+0.01%)",
+    "value": "375.05"
+  },
+  "separators": {
+    "highlight": "",
+    "unhighlight": "",
+    "updateProps":""
+  }
+};
+
 const HomePage: React.FC = () => {
   return (
     <StyledContainer>
@@ -34,7 +58,7 @@ const HomePage: React.FC = () => {
       <Button iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
       <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text='+$0.42 (0.48%)' variant='numgreen' />
       <TextIcon iconRigth={<SecretIcon />} text='$12,535.00' variant='largeTitle' />
-      <ItemList />
+
       </ScrollView>
     </StyledContainer>
   );

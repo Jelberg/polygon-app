@@ -13,7 +13,7 @@ interface IItemList {
 
 export const StyledTouchableOpacity = styled.TouchableOpacity`
 padding-horizontal: 20px;
-padding-vertical: 18px;
+padding-vertical: 12px;
 width: 100%;
 align-items: center;
 background-color: ${ThemeColors.gray};
@@ -29,19 +29,29 @@ export const StyledView = styled.View`
   flex: ${(props) => (props.theme.flex) || 1};
 `;
 
-const ItemList: React.FC<IItemList> = () => {
+const ItemList = (data) => {
+    console.log('ItemList');
+    console.log(data);
+    console.log(data.item);
+    console.log(data.item.company[0]['company']);
+    console.log(data.item.summary);
 
     return <StyledTouchableOpacity>
         <StyledView theme={{flex: 0.8 }}>
-            <Avatar />
+            {data.item.company[0]['logo'] === "" ? <Avatar /> : <Avatar imgUri={data.item.company[0]['logo']}/>}
         </StyledView>
         <StyledView theme={{flex: 2 }}>
-            <Text theme={{variant:'h2'}} style={{marginBottom:5}}>SPFT</Text>
-            <Text theme={{variant:'caption'}}>Spotify</Text>
+            <Text theme={{variant:'h2'}} style={{marginBottom:5}}>{data.item.company[0]['ticket']}</Text>
+            <Text theme={{variant:'caption'}}>{data.item.company[0]['company']}</Text>
         </StyledView>
         <StyledView theme={{align:'right', flex: 2}}>
             <Text theme={{variant:'h2'}} style={{marginBottom:5}}>$102.45</Text>
-            <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text='+$0.42 (0.48%)' variant='numgreen' />
+            {
+            data.item.signal === '+'?
+            <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text={data.item.summary} variant='numgreen' />:
+            <TextIcon iconLeft={<ArrowTradeDownIcon color={ThemeColors.red}/>} text={data.item.summary} variant='numred' />
+            }
+            
         </StyledView>
     </StyledTouchableOpacity>
 }

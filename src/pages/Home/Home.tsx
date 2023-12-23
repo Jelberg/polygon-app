@@ -6,14 +6,15 @@ import InvestingSection from "./InvestingSection"
 import BuyingSection from "./BuyingSection"
 import TopMoversSection from "./TopMoversSection"
 
+
 const HomePage: React.FC = () => {
  return <StyledContainer>
-   <ScrollView>
+   
       <InvestingSection />
       <BuyingSection />
       <Watchlist/>
       <TopMoversSection />
-   </ScrollView>
+   
  </StyledContainer>
 }
 
