@@ -1,35 +1,33 @@
 # Polygon App
 
-El proyecto consiste en el desarrollo de una aplicación móvil utilizando React Native y un backend basado en NodeJS con ExpressJS. La aplicación obtendrá datos de la API Polygon para mostrar información sobre estados de carga y variaciones de precios en acciones
+The project involves the development of a mobile application using React Native and a backend based on NodeJS with ExpressJS. The application will fetch data from the Polygon API to display information about loading states and price variations in stocks.
 
-## Tabla de Contenidos
+## Table of Contents
 
-- [Características](#características)
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Configuración](#configuración)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Installation and Execution](#installation)
 
-## Características
+## Features
 
-  - Visualización de información sobre la variación de precios de acciones.
-  - Watchlist personalizada.
-  - Actualización de datos con gesto de arrastrar hacia abajo.
+- Visualization of information about stock price variations.
+- Customized watchlist.
+- Data update with a pull-down gesture.
 
-## Capturas de Pantalla
+## Screenshots
 
-![Imagen del home](assets/img/home.png)
+![Home Image](assets/img/home.png)
 
-## Instalación y ejecucion
+## Installation and Execution
 
-Para este proyecto se uso Node V21.0.0 y se desarrollo con Expo y TypeScript para manajar correctamente los tipos
-Nota: En el caso de Android es recomendable en la version 33 
+For this project, Node V21.0.0 was used, and it was developed with Expo and TypeScript to handle types correctly.
+
+Note: For Android, version 33 is recommended.
+
 ```bash
-# Intalacion de las dependencias
+# Install dependencies
 npm install
 
-# Ejecicion sobre las plataformas
+# Run on platforms
 npm run android
 npm run ios
