@@ -7,18 +7,20 @@ import MoreIcon from "../assets/icons/MoreIcon";
 import ConvertIcon from "../assets/icons/ConvertIcon";
 import PortfolioIcon from "../assets/icons/PortfolioIcon";
 
-import HomePage from "../pages/Home/Home";
-import MorePage from "../pages/More";
-import PortfolioPage from "../pages/Portfolio";
-import MarketsPage from "../pages/Markets";
-import ConvertPage from "../pages/Convert";
+import HomePage from "../pages/Home/HomePage";
+import MorePage from "../pages/MorePage";
+import PortfolioPage from "../pages/PortfolioPage";
+import MarketsPage from "../pages/MarketsPage";
+import ConvertPage from "../pages/ConvertPage";
 import { ThemeColors } from "../components/theme/ThemeColors";
+
+import WatchlistNavigation from "./WatchlistNavigation";
 
 const Tab = createBottomTabNavigator();
 export default function Navigation() {
   return (
     <Tab.Navigator 
-    initialRouteName="Home" 
+    initialRouteName="HomeNav" 
     screenOptions={{
       tabBarStyle: {
         backgroundColor: ThemeColors.gray,
@@ -27,8 +29,8 @@ export default function Navigation() {
       }
     }}>
       <Tab.Screen
-        name="Home"
-        component={HomePage}
+        name="HomeNav"
+        component={WatchlistNavigation}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (

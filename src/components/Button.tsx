@@ -8,7 +8,7 @@ interface IButton {
     iconRigth?: ReactElement;
     iconLeft?: ReactElement;
     title: string,
-    onPress?: () => void,
+    onPress: () => void,
     style?: StyleProp<ViewStyle>,
 }
 
@@ -27,7 +27,7 @@ const Button: React.FC<IButton> = ({iconRigth, iconLeft, title='Button Example',
 
 
     const handleOnPress = () => {
-        onPress ? onPress() : console.log('handleOnPressButton')
+        onPress()
     }
 
     return (<StyledTouchableOpacity onPress={ handleOnPress } style={style}>

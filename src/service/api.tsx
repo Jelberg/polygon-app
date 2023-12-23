@@ -1,13 +1,13 @@
 import axios from "axios";
-import {SERVICE_URL} from "../Enviroments"
+import {env} from "../Enviroments"
 
 export async function getInfoListApi() {
     try {
-      console.log(SERVICE_URL)
-      const response = await axios.get('https://f945-2605-6440-1012-e000-00-9528.ngrok-free.app/api/stock');
+      console.log(env.service_url)
+      const response = await axios.get(`${env.service_url}/stock`);
       return response.data;
     } catch (error) {
-      console.error('Error al realizar la solicitud:', error.message);
+      console.error('Error:', error.message);
       throw error; 
     }
   }

@@ -54,8 +54,8 @@ const HomePage: React.FC = () => {
       <Text theme={{variant:'largeTitle'}}>Large Title</Text>
       <Text >Default Body</Text>
       <Avatar />
-      <Button iconLeft={<PlusIcon />} title='Deposit' />
-      <Button iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
+      <Button iconLeft={<PlusIcon />} title='Deposit' onPress={()=>(true)} />
+      <Button iconRigth={<ArrowRigthIcon />} onPress={()=>(true)} title='All' style={{backgroundColor: 'transparent'}}/>
       <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text='+$0.42 (0.48%)' variant='numgreen' />
       <TextIcon iconRigth={<SecretIcon />} text='$12,535.00' variant='largeTitle' />
 

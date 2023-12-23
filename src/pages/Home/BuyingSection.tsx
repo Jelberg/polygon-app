@@ -30,7 +30,7 @@ const BuyingSection: React.FC = () => {
     <Text theme={{variant:'h2'}}>$840.50</Text> 
     </StyledView>
     <StyledView>
-    <Button iconLeft={<PlusIcon />} title='Deposit' />
+    <Button onPress={()=> true} iconLeft={<PlusIcon />} title='Deposit' />
     </StyledView>
  </StyledContainer>
 }

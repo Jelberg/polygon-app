@@ -10,7 +10,7 @@ import { ThemeColors } from "../../components/theme/ThemeColors"
 export const StyledView = styled.View`
     padding-horizontal: 20px;
     padding-vertical: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
     flex-direction: column;
     align-items: flex-start;
     border-bottom-width: 0.5px;

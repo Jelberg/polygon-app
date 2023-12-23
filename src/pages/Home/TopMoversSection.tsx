@@ -20,12 +20,12 @@ const TopMoversSection: React.FC = () => {
  return <>
   <StyledContainer>
     <Text theme={{variant:'h2'}}>Top Movers</Text>
-    <Button iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
+    <Button onPress={()=>(true)}  iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>
   </StyledContainer>
   <StyledContainer>
-    <Button title='Tranding' />
-    <Button title='Top Gainers' style={{backgroundColor: 'transparent'}}/>
-    <Button title='Top Losers' style={{backgroundColor: 'transparent'}}/>
+    <Button onPress={()=>(true)}  title='Tranding' />
+    <Button onPress={()=>(true)} title='Top Gainers' style={{backgroundColor: 'transparent'}}/>
+    <Button onPress={()=>(true)}  title='Top Losers' style={{backgroundColor: 'transparent'}}/>
   </StyledContainer>
  </> 
 }

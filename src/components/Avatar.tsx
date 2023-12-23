@@ -8,8 +8,7 @@ interface IAvatar {
 export const StyledImage = styled.Image`
 width: 40px;
 height: 40px;
-border-radius: 50px;
-background-color: 'gray' 
+border-radius: 50px; 
 `
 
 export const StyledView = styled.View`

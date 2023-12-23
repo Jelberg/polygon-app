@@ -7,9 +7,6 @@ import Avatar from "./Avatar";
 import ArrowTradeDownIcon from "../assets/icons/ArrowTradeDownIcon";
 import ArrowTradeUpIcon from "../assets/icons/ArrowTradeUpIcon";
 
-interface IItemList {
-    
-}
 
 export const StyledTouchableOpacity = styled.TouchableOpacity`
 padding-horizontal: 20px;
@@ -30,11 +27,6 @@ export const StyledView = styled.View`
 `;
 
 const ItemList = (data) => {
-    console.log('ItemList');
-    console.log(data);
-    console.log(data.item);
-    console.log(data.item.company[0]['company']);
-    console.log(data.item.summary);
 
     return <StyledTouchableOpacity>
         <StyledView theme={{flex: 0.8 }}>
@@ -45,7 +37,7 @@ const ItemList = (data) => {
             <Text theme={{variant:'caption'}}>{data.item.company[0]['company']}</Text>
         </StyledView>
         <StyledView theme={{align:'right', flex: 2}}>
-            <Text theme={{variant:'h2'}} style={{marginBottom:5}}>$102.45</Text>
+            <Text theme={{variant:'h2'}} style={{marginBottom:5}}>${data.item.value}</Text>
             {
             data.item.signal === '+'?
             <TextIcon iconLeft={<ArrowTradeUpIcon color={ThemeColors.green}/>} text={data.item.summary} variant='numgreen' />:
