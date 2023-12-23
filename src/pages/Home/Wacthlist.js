@@ -9,7 +9,6 @@ import ArrowRigthIcon from "../../assets/icons/ArrowRigthIcon"
 import List from "./List"
 import { useNavigation } from "@react-navigation/native"
 
-
 export const StyledContainer = styled.View`
     flex-direction: row;
     align-items: flex-start;
@@ -29,12 +28,12 @@ export const StyledContainerMessage = styled.View`
     background-color: ${ThemeColors.gray}
 `
 
-const Watchlist: React.FC = () => {
+
+const Watchlist = () => {
   const navigation = useNavigation()
 
   const goTo = () => {
-    console.log("Estoy aquiiiii")
-    navigation.navigate("watchlist" as never)
+    //navigation.navigate("WatchlistScreen")
   }
 
     return <>
@@ -42,7 +41,7 @@ const Watchlist: React.FC = () => {
     <Text theme={{variant:'h1'}}>Watchlist</Text>
     <Button onPress={goTo} iconRigth={<ArrowRigthIcon />} title='All' style={{backgroundColor: 'transparent'}}/>   
     </StyledContainer>    
-    <List max_data={4}/>
+    <List />
 
     </>
 }

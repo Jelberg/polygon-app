@@ -44,7 +44,11 @@ const List: React.FC<IWatchlist> = ({
       setRefreshing(false);
     }, 2000);
   }, []);
-    
+
+  const getInfo = async () => {
+    return await getInfoListApi()
+  }
+      
     const { isPending, error, data } = useQuery({
         queryKey: ['repoData'],
         queryFn: () => getInfoListApi()
@@ -52,11 +56,12 @@ const List: React.FC<IWatchlist> = ({
     
       if (isPending) return <StyledContainerMessage><Text>Loading...</Text></StyledContainerMessage>
     
-      if (error) return <StyledContainerMessage>
+      if (error ) return <StyledContainerMessage>
         <Text>Error to show this section, please refresh</Text>
-        <Button onPress={onRefresh} title='Refresh' style={{backgroundColor: ThemeColors.primary, marginTop:5}} />
+        <Button onPress={getInfo} title='Refresh' style={{backgroundColor: ThemeColors.primary, marginTop:5}} />
         </StyledContainerMessage>
       
+      console.log(data)
       if (max_data === null) {
         max_data = data.length
       } 

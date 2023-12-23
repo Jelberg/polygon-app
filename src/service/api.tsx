@@ -11,4 +11,6 @@ export async function getInfoListApi() {
       throw error; 
     }
   }
+
+  
   

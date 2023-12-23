@@ -17,7 +17,7 @@ export default function WatchlistNavigation() {
        
       />
       <Stack.Screen
-        name="watchlist"
+        name="WatchlistScreen"
         component={WatchlistPage}
         options={{
           headerShown: false
