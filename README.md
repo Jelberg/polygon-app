@@ -7,6 +7,7 @@ The project involves the development of a mobile application using React Native 
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Installation and Execution](#installation)
+- [Project Structure](#project-structure)
 
 ## Features
 
@@ -31,3 +32,24 @@ npm install
 # Run on platforms
 npm run android
 npm run ios
+```
+
+## Project Structure
+
+```bash
+src
+├───assets # Fonts, icons, and images for the app
+│   ├───fonts
+│   ├───icons
+│   └───img
+├───components # App components such as buttons, texts, etc.
+│   └───theme # Components related only to the app theme
+├───context
+├───data # Mock data
+├───hooks
+├───navigation # Where app navigation is established (Tabs and Stacks)
+├───pages # Application views
+│   └───Home
+├───service # Connection to external services
+└───utils
+```
