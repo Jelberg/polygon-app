@@ -38,37 +38,37 @@ const List: React.FC<IWatchlist> = ({
 
   const [refreshing, setRefreshing] = useState(false);
 
+  // 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
+    //Timeout for simulate refresh event.
     setTimeout(() => {
       setRefreshing(false);
     }, 2000);
   }, []);
 
-  const getInfo = async () => {
-    return await getInfoListApi()
-  }
       
-    const { isPending, error, data } = useQuery({
+    const query = useQuery({
         queryKey: ['repoData'],
         queryFn: () => getInfoListApi()
       })
     
-      if (isPending) return <StyledContainerMessage><Text>Loading...</Text></StyledContainerMessage>
+      if (query.isPending) return <StyledContainerMessage><Text>Loading...</Text></StyledContainerMessage>
     
-      if (error ) return <StyledContainerMessage>
+      if (query.error ) return <StyledContainerMessage>
         <Text>Error to show this section, please refresh</Text>
-        <Button onPress={getInfo} title='Refresh' style={{backgroundColor: ThemeColors.primary, marginTop:5}} />
+        <Button onPress={() => query.refetch()} title='Refresh' style={{backgroundColor: ThemeColors.primary, marginTop:5}} />
         </StyledContainerMessage>
       
-      console.log(data)
+      console.log(query.data)
+
       if (max_data === null) {
-        max_data = data.length
+        max_data = query.data.length
       } 
 
     return <>
     <FlatList 
-      data={data.slice(0, max_data)}
+      data={query.data.slice(0, max_data)}
       renderItem={ItemList}
       refreshControl={
         <RefreshControl
